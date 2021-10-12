@@ -1,0 +1,40 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: executor
+  jackson:
+    timeZone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss:SSS
+    default-property-inclusion: non_null
+    parser:
+      allow-single-quotes: true
+    serialization:
+      fail-on-empty-beans: false
+    deserialization:
+      fail-on-unknown-properties: false
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.2.3.201:18117
+        username: nacos
+        password: Nacos@cloudwise_123
+        enabled: true
+        register-enabled: true
+        namespace: xxl-job-demo
+        group: xxl-job
+      config:
+        server-addr: 10.2.3.201:18117
+        username: nacos
+        password: Nacos@cloudwise_123
+        namespace: xxl-job-demo
+        extension-configs:
+          - dataId: executor.yml
+            group: executor
+            refresh: true
+
+#xxl:
+#  job:
+#    executor:
+#      #address: http://192.168.0.112:7001

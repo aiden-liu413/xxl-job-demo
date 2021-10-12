@@ -1,0 +1,5 @@
+# 项目排除路径
+/admin/target/
+/common/target/
+/consumer/target/
+/executor/target/

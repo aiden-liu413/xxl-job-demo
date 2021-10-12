@@ -1,0 +1,19 @@
+# 此配置只适合开发测试环境，
+server:
+  port: 5006
+  servlet:
+    context-path: /xxl-job-admin
+
+spring:
+  application:
+    name: @artifactId@
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.2.3.201:18117
+        username: nacos
+        password: Nacos@cloudwise_123
+        enabled: true
+        register-enabled: true
+        namespace: xxl-job-demo
+        group: xxl-job
