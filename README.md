@@ -119,7 +119,7 @@ Run `XxlJobAdminApplication`
 
 ```
 
-### 2.2. 编写 配置类 XxlJobProps.java
+### 2.2. 执行器开启xxl-job能力，添加@EnableXxlJob注解
 
 ```java
 /**
