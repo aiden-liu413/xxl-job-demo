@@ -165,7 +165,7 @@ xxl:
       log-retention-days: -1
 ```
 
-### 2.4. 自动装配逻辑源码关键代码
+### 2.4. 自动装配逻辑关键代码
 module：common - @EnableXxlJob
 ```java
 /**
