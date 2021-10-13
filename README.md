@@ -486,4 +486,6 @@ public class ManualOperateController {
 ## 参考
 
 - [《分布式任务调度平台xxl-job》](http://www.xuxueli.com/xxl-job/#/)
+- [pig:宇宙最强微服务认证授权脚手架(架构师必备)](https://github.com/pigxcloud/pig)
+- [spring-boot-demo/tree/master/demo-task-xxl-job](https://github.com/xkcoding/spring-boot-demo/tree/master/demo-task-xxl-job)
 
