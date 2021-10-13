@@ -55,10 +55,8 @@ Run `XxlJobAdminApplication`
 
 默认用户名密码：admin/admin
 
-![image-20190808105554414](https://static.xkcoding.com/spring-boot-demo/2019-08-08-025555.png)
-
-![image-20190808105628852](https://static.xkcoding.com/spring-boot-demo/2019-08-08-025629.png)
-
+![img.png](xxl-job-demo-1.png)
+![img.png](xxl-job-demo-2.png)
 ## 2. 编写执行器项目
 
 ### 2.1. pom.xml
@@ -310,14 +308,12 @@ Run `ExecutorApplication`
 
 执行器管理 - 新增执行器
 
-![image-20190808105910203](https://static.xkcoding.com/spring-boot-demo/2019-08-08-025910.png)
-
+![img.png](xxl-job-demo-3.png)
 ### 3.2. 添加定时任务
 
 任务管理 - 新增 - 保存
 
-![image-20190808110127956](https://static.xkcoding.com/spring-boot-demo/2019-08-08-030128.png)
-
+![img.png](xxl-job-demo-4.png)
 ### 3.3. 启停定时任务
 
 任务列表的操作列，拥有以下操作：执行、启动/停止、日志、编辑、删除
