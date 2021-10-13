@@ -48,3 +48,7 @@ xxl-job-demo
 
 [![aiden.liu/xxl-job-demo](https://gitee.com/aiden-liu/xxl-job-demo/widgets/widget_card.svg?colors=ffffff,1e252b,323d47,455059,d7deea,99a0ae)](https://gitee.com/aiden-liu/xxl-job-demo) 
 
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/aiden-liu413/xxl-job-demo.svg)](https://starchart.cc/aiden-liu413/xxl-job-demo)
+
