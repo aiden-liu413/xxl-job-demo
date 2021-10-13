@@ -1,6 +1,23 @@
 # xxl-job-demo
 
 > 此 demo 主要演示了 Spring cloud 如何集成 XXL-JOB 实现分布式定时任务，并提供绕过 `xxl-job-admin` 对定时任务的管理的方法，包括定时任务列表，触发器列表，新增定时任务，删除定时任务，停止定时任务，启动定时任务，修改定时任务，手动触发定时任务。
+<p align="center">
+ <img src="https://img.shields.io/badge/xxl%20job%20demo-1.0.0-success.svg" alt="Build Status">
+ <img src="https://img.shields.io/badge/Spring%20Cloud-2020.0.3-blue.svg" alt="Coverage Status">
+ <img src="https://img.shields.io/badge/Spring%20Cloud%20Alibaba-2021.1-blue.svg" alt="Coverage Status">
+ <img src="https://img.shields.io/badge/Spring%20Boot-2.4.2-blue.svg" alt="Downloads">
+ <img src="https://img.shields.io/github/license/aiden-liu413/xxl-job-demo"/>
+ <img src="https://img.shields.io/github/stars/aiden-liu413/xxl-job-demo">   
+</p>
+
+> clone下来的项目源码已经可以用了，下面的1-4是改造xxl-job以及改造执行器的步骤。
+> 若不关心改造过程，可直接使用，详见《启动步骤》
+##启动步骤
+- 执行 /sql/xxl-job.sql -- 调度中心的sql脚本
+- 启动nacos  
+- RUN XxlJobAdminApplication  --调度中心
+- RUN ExecutorApplication  --执行器
+- RUN ConsumerApplication  --消费者
 
 ## 1. xxl-job-admin调度中心
 
