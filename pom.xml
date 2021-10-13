@@ -55,6 +55,7 @@
         <module>common</module>
         <module>executor</module>
         <module>admin</module>
+        <module>consumer</module>
     </modules>
 
 
