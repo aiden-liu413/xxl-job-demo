@@ -12,7 +12,7 @@
 
 > clone下来的项目源码已经可以用了，下面的1-4是改造xxl-job以及改造执行器的步骤。
 > 若不关心改造过程，可直接使用，详见《启动步骤》
-##启动步骤
+## 启动步骤
 - 执行 /sql/xxl-job.sql -- 调度中心的sql脚本
 - 启动nacos  
 - RUN XxlJobAdminApplication  --调度中心
