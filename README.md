@@ -6,5 +6,7 @@
 - [《点我查看文档》](https://aiden-liu413.github.io/xxl-job-demo/)
 
 ## gitee
-[![aiden.liu/xxl-job-demo](https://gitee.com/aiden-liu/xxl-job-demo/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/aiden-liu/xxl-job-demo) 
+来star起来吧
+[![star](https://gitee.com/aiden-liu/xxl-job-demo/badge/star.svg?theme=dark)](https://gitee.com/aiden-liu/xxl-job-demo/stargazers)
+[![aiden.liu/xxl-job-demo](https://gitee.com/aiden-liu/xxl-job-demo/widgets/widget_card.svg?colors=ffffff,1e252b,323d47,455059,d7deea,99a0ae)](https://gitee.com/aiden-liu/xxl-job-demo) 
 
