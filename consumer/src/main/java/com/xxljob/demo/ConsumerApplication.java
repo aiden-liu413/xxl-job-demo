@@ -10,8 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author pig archetype
- * <p>
+ * @author aiden
  * 项目启动类
  */
 @EnableDiscoveryClient
