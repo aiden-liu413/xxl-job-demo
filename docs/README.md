@@ -22,7 +22,8 @@
 - RUN ExecutorApplication  --执行器
 - RUN ConsumerApplication  --消费者
 
-## 1. xxl-job-admin调度中心
+## 改造步骤
+### 1. xxl-job-admin调度中心
 
 > https://github.com/xuxueli/xxl-job.git
 
@@ -32,11 +33,11 @@
 $ git clone https://github.com/xuxueli/xxl-job.git
 ```
 
-### 1.1. 创建调度中心的表结构
+#### 1.1. 创建调度中心的表结构
 
 数据库脚本地址：`/xxl-job/doc/db/tables_xxl_job.sql`
 
-### 1.2. 修改 application.properties
+#### 1.2. 修改 application.properties
 
 ```properties
 server.port=18080
@@ -46,13 +47,13 @@ spring.datasource.username=root
 spring.datasource.password=root
 ```
 
-### 1.3. 修改日志配置文件 logback.xml
+#### 1.3. 修改日志配置文件 logback.xml
 
 ```xml
 <property name="log.path" value="logs/xxl-job/xxl-job-admin.log"/>
 ```
 
-### 1.4. 启动调度中心
+#### 1.4. 启动调度中心
 
 Run `XxlJobAdminApplication`
 
@@ -60,9 +61,9 @@ Run `XxlJobAdminApplication`
 
 ![img.png](xxl-job-demo-1.png)
 ![img.png](xxl-job-demo-2.png)
-## 2. 编写执行器项目
+### 2. 编写执行器项目
 
-### 2.1. pom.xml
+#### 2.1. pom.xml
 
 ```xml
 <?xml version="1.0"?>
@@ -137,7 +138,7 @@ Run `XxlJobAdminApplication`
 
 ```
 
-### 2.2. 执行器开启xxl-job能力，添加@EnableXxlJob注解
+#### 2.2. 执行器开启xxl-job能力，添加@EnableXxlJob注解
 
 ```java
 /**
@@ -156,7 +157,7 @@ class ExecutorApplication {
 }
 ```
 
-### 2.3. 编写配置文件 application.yml
+#### 2.3. 编写配置文件 application.yml
 
 ```yaml
 server:
@@ -183,7 +184,7 @@ xxl:
       log-retention-days: -1
 ```
 
-### 2.4. 自动装配逻辑关键代码
+#### 2.4. 自动装配逻辑关键代码
 module：common - @EnableXxlJob
 ```java
 /**
@@ -264,7 +265,7 @@ module：executor - XxlJobAutoConfiguration.java
 }
 ```
 
-### 2.5. 编写具体的定时逻辑 DemoTask.java
+#### 2.5. 编写具体的定时逻辑 DemoTask.java
 
 ```java
 /**
@@ -301,23 +302,23 @@ public class DemoTask{
 }
 ```
 
-### 2.6. 启动执行器
+#### 2.6. 启动执行器
 
 Run `ExecutorApplication`
 
-## 3. 配置定时任务
+### 3. 配置定时任务
 
-### 3.1. 将启动的执行器添加到调度中心
+#### 3.1. 将启动的执行器添加到调度中心
 
 执行器管理 - 新增执行器
 
 ![img.png](xxl-job-demo-3.png)
-### 3.2. 添加定时任务
+#### 3.2. 添加定时任务
 
 任务管理 - 新增 - 保存
 
 ![img.png](xxl-job-demo-4.png)
-### 3.3. 启停定时任务
+#### 3.3. 启停定时任务
 
 任务列表的操作列，拥有以下操作：执行、启动/停止、日志、编辑、删除
 
@@ -333,13 +334,13 @@ Run `ExecutorApplication`
 
 删除：删除定时任务
 
-## 4. 使用API添加定时任务
+### 4. 使用API添加定时任务
 
 > 实际场景中，如果添加定时任务都需要手动在 xxl-job-admin 去操作，这样可能比较麻烦，用户更希望在自己的页面，添加定时任务参数、定时调度表达式，然后通过 API 的方式添加定时任务
 
-### 4.1. 改造xxl-job-admin
+#### 4.1. 改造xxl-job-admin
 
-#### 4.1.1. 修改 JobGroupController.java
+##### 4.1.1. 修改 JobGroupController.java
 
 ```java
 ...
@@ -354,16 +355,16 @@ public ReturnT<List<XxlJobGroup>> list(){
 ...
 ```
 
-#### 4.1.2. 修改 JobInfoController.java
+##### 4.1.2. 修改 JobInfoController.java
 
 ```java
 // 分别在 pageList、add、update、remove、pause、start、triggerJob 方法上添加注解，去除权限校验
 @PermissionLimit(limit = false)
 ```
 
-### 4.2. 改造 执行器项目
+#### 4.2. 改造 执行器项目
 
-#### 4.2.1. 添加手动触发类
+##### 4.2.1. 添加手动触发类
 
 ```java
 /**
