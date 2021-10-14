@@ -73,10 +73,10 @@
 		</dependency>
 
 		<!--undertow容器-->
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-undertow</artifactId>
-		</dependency>
+		</dependency>-->
 	</dependencies>
 
 	<build>
