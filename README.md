@@ -44,6 +44,9 @@ xxl-job-demo
 ## 文档
 [《点我查看文档》](https://aiden-liu413.github.io/xxl-job-demo/)
 
+## xxl-job集成nacos架构图
+![img.png](./docs/流程图.jpg)
+
 ## gitee
 
 [![aiden.liu/xxl-job-demo](https://gitee.com/aiden-liu/xxl-job-demo/widgets/widget_card.svg?colors=ffffff,1e252b,323d47,455059,d7deea,99a0ae)](https://gitee.com/aiden-liu/xxl-job-demo) 
