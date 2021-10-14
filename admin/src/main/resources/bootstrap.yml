@@ -12,7 +12,7 @@ spring:
       discovery:
         server-addr: 10.2.3.201:18117
         username: nacos
-        password: Nacos@cloudwise_123
+        password:
         enabled: true
         register-enabled: true
         namespace: xxl-job-demo
